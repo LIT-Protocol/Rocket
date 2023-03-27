@@ -7,7 +7,7 @@
 //!
 //!    ```toml
 //!    [dependencies.rocket_db_pools]
-//!    version = "0.1.0-rc.2"
+//!    version = "=0.1.0-rc.3"
 //!    features = ["sqlx_sqlite"]
 //!    ```
 //!
@@ -105,10 +105,10 @@
 //!
 //! ## `deadpool` (v0.9)
 //!
-//! | Database | Feature             | [`Pool`] Type               | [`Connection`] Deref                  |
-//! |----------|---------------------|-----------------------------|---------------------------------------|
-//! | Postgres | `deadpool_postgres` | [`deadpool_postgres::Pool`] | [`deadpool_postgres::ClientWrapper`]  |
-//! | Redis    | `deadpool_redis`    | [`deadpool_redis::Pool`]    | [`deadpool_redis::Connection`]        |
+//! | Database | Feature                     | [`Pool`] Type               | [`Connection`] Deref                 |
+//! |----------|-----------------------------|-----------------------------|--------------------------------------|
+//! | Postgres | `deadpool_postgres` (v0.10) | [`deadpool_postgres::Pool`] | [`deadpool_postgres::ClientWrapper`] |
+//! | Redis    | `deadpool_redis` (v0.11)    | [`deadpool_redis::Pool`]    | [`deadpool_redis::Connection`]       |
 //!
 //! On shutdown, new connections are denied. Shutdown _does not_ wait for
 //! connections to be returned.
@@ -151,12 +151,12 @@
 //!
 //! ```toml
 //! [dependencies.sqlx]
-//! version = "0.5"
+//! version = "0.6"
 //! default-features = false
 //! features = ["macros", "offline", "migrate"]
 //!
 //! [dependencies.rocket_db_pools]
-//! version = "0.1.0-rc.2"
+//! version = "=0.1.0-rc.3"
 //! features = ["sqlx_sqlite"]
 //! ```
 //!
@@ -191,7 +191,7 @@
 //!
 //! ## Driver Defaults
 //!
-//! Some drivers provide configuration defaults different from the underyling
+//! Some drivers provide configuration defaults different from the underlying
 //! database's defaults. A best-effort attempt is made to document those
 //! differences below:
 //!
@@ -216,7 +216,7 @@
 //!
 //! # Extending
 //!
-//! Any database driver can implement support for this libary by implementing
+//! Any database driver can implement support for this library by implementing
 //! the [`Pool`] trait.
 
 #![doc(html_root_url = "https://api.rocket.rs/master/rocket_db_pools")]
