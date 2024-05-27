@@ -312,6 +312,7 @@ impl Status {
         428, "428", PreconditionRequired => "Precondition Required",
         429, "429", TooManyRequests => "Too Many Requests",
         431, "431", RequestHeaderFieldsTooLarge => "Request Header Fields Too Large",
+        432, "432", MaxPriceExceeded => "Max Price Exceeded",
         451, "451", UnavailableForLegalReasons => "Unavailable For Legal Reasons",
         500, "500", InternalServerError => "Internal Server Error",
         501, "501", NotImplemented => "Not Implemented",

@@ -31,3 +31,7 @@ scripts/redirect.html
 
 # Uploads in pastebin example.
 examples/pastebin/upload/*
+
+# Backup and writebackup files
+**/*.un~
+**/*.swp
